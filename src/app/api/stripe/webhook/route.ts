@@ -1,4 +1,5 @@
-import { env } from "@/env";
+import type Stripe from "stripe";
+import { env } from "../../../../env";
 import {
   deletePriceRecord,
   deleteProductRecord,
@@ -6,8 +7,7 @@ import {
   stripe,
   upsertPriceRecord,
   upsertProductRecord,
-} from "@/server/stripe";
-import type Stripe from "stripe";
+} from "../../../../server/stripe";
 
 const relevantEvents = new Set([
   "product.created",
