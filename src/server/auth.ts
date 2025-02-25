@@ -9,7 +9,6 @@ import {
   getServerSession,
 } from "next-auth";
 
-import { env } from "@/env";
 import { getAuthenticatorOptions } from "@/lib/authenticator";
 import {
   type TAuthenticationResponseJSONSchema,
@@ -21,6 +20,7 @@ import { verifyAuthenticationResponse } from "@simplewebauthn/server";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import { cache } from "react";
+import { env } from "../env";
 import { getUserByEmail, getUserById } from "./user";
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
