@@ -1,14 +1,14 @@
-import FileIcon from "@/components/common/file-icon";
-import FilePreview from "@/components/file/preview";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { withServerComponentSession } from "@/server/auth";
-import { db } from "@/server/db";
-import { getPresignedGetUrl } from "@/server/file-uploads";
 import { RiArrowLeftSLine } from "@remixicon/react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Fragment } from "react";
+import FileIcon from "../../../../../../components/common/file-icon";
+import FilePreview from "../../../../../../components/file/preview";
+import { Button } from "../../../../../../components/ui/button";
+import { Card } from "../../../../../../components/ui/card";
+import { withServerComponentSession } from "../../../../../../server/auth";
+import { db } from "../../../../../../server/db";
+import { getPresignedGetUrl } from "../../../../../../server/file-uploads";
 
 const DocumentPreview = async ({
   params: { publicId, bucketId },
